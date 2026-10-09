@@ -1,0 +1,54 @@
+body{
+    text-align: center;
+}
+header{
+    background-color: blueviolet;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-align: center;
+    line-height: 1;
+}
+
+main{
+
+    background-color: brown;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-align: center;
+    line-height: 1;
+}
+img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border: 3px solid #3b82f6;
+
+}
+section{
+    background-color: darkgreen;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    line-height: 1;
+    text-align: center;
+}
+ul{
+    background-color: rgb(27, 205, 214);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-align: center;
+    
+
+}
+h3{
+  background-color: rgb(183, 27, 144);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-align: center;   
+}
