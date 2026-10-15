@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Suanfonson — Recargas de Juegos a la Velocidad de la Luz ⚡</title>
+  <meta name="description" content="Recargas instantáneas para Free Fire, Call of Duty, Mobile Legends, EA FC FIFA, League of Legends, Clash Royale, PUBG Mobile y Wild Rift. ¡Tus monedas en un Suanfonson!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ============================================================
+       SISTEMA DE DISEÑO: EL SUANFONSON GAMING VELOCITY
+       ============================================================ */
+    :root {
+      --bg-dark: #070913;
+      --bg-card: rgba(16, 20, 38, 0.75);
+      --bg-card-hover: rgba(26, 33, 62, 0.9);
+      --border-card: rgba(255, 255, 255, 0.1);
+      --border-glow: rgba(0, 240, 255, 0.4);
+
+      /* Colores Neón & F1 Velocity */
+      --f1-red: #ff1801;
+      --cyan-neon: #00f0ff;
+      --yellow-speed: #ffd000;
+      --purple-neon: #9d4edd;
+      --green-neon: #00ff88;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --font-brand: 'Orbitron', sans-serif;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 32px;
+      --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 24, 1, 0.14) 0%, transparent 40%),
+        radial-gradient(circle at 90% 15%, rgba(0, 240, 255, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 50% 60%, rgba(157, 78, 221, 0.12) 0%, transparent 50%),
+        linear-gradient(180deg, #070913 0%, #0d1124 100%);
+      background-attachment: fixed;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-dark);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--cyan-neon), var(--f1-red));
+      border-radius: 4px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================
+       NAVBAR
+       ============================================================ */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(7, 9, 19, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--f1-red), var(--yellow-speed));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-size: 1.4rem;
+      box-shadow: 0 0 20px rgba(255, 208, 0, 0.5);
+      transform: skewX(-8deg);
+      transition: transform 0.3s ease;
+    }
+
+    .brand-group:hover .brand-icon {
+      transform: skewX(-8deg) scale(1.1) rotate(5deg);
+    }
+
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: var(--font-brand);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      background: linear-gradient(90deg, #fff 0%, var(--yellow-speed) 50%, var(--cyan-neon) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+
+    .brand-tag {
+      font-size: 0.68rem;
+      color: var(--cyan-neon);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan-neon);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .currency-select {
+      background: rgba(16, 20, 38, 0.9);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .btn-speed-sound {
+      background: rgba(255, 24, 1, 0.15);
+      border: 1px solid var(--f1-red);
+      color: var(--f1-red);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-speed-sound:hover {
+      background: var(--f1-red);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(255, 24, 1, 0.6);
+      transform: scale(1.05);
+    }
+
+    /* ============================================================
+       HERO COVER: EL CREADOR DEL SUANFONSON (CARLOS JULIO DICKSON)
+       ============================================================ */
+    .hero-section {
+      padding-top: 110px;
+      padding-bottom: 60px;
+      position: relative;
+    }
+
+    .hero-banner-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 2px solid rgba(0, 240, 255, 0.35);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 240, 255, 0.2);
+      background: #000;
+      height: 480px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      filter: brightness(0.9) contrast(1.05);
+      transition: transform 0.8s ease;
+    }
+
+    .hero-banner-card:hover .hero-bg-img {
+      transform: scale(1.03);
+    }
+
+    .hero-overlay-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg, 
+        rgba(7, 9, 19, 0.2) 0%, 
+        rgba(7, 9, 19, 0.65) 50%, 
+        rgba(7, 9, 19, 0.95) 95%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+    }
+
+    .hero-text-area {
+      max-width: 780px;
+    }
+
+    .suanfonson-meme-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 208, 0, 0.2);
+      border: 1px solid var(--yellow-speed);
+      color: var(--yellow-speed);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-title {
+      font-family: var(--font-brand);
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 0 0 25px rgba(0, 240, 255, 0.6);
+    }
+
+    .hero-title span {
+      background: linear-gradient(90deg, var(--yellow-speed), var(--f1-red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-quote {
+      font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+      color: #e2e8f0;
+      font-weight: 500;
+      line-height: 1.5;
+      background: rgba(7, 9, 19, 0.65);
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--cyan-neon);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-badge-box {
+      background: rgba(16, 20, 38, 0.85);
+      border: 1px solid var(--cyan-neon);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      text-align: center;
+      min-width: 240px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    }
+
+    .speed-meter {
+      font-family: var(--font-brand);
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--cyan-neon);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .speed-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    /* Barra de Ventajas Rápidas */
+    .perks-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .perk-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: var(--transition);
+    }
+
+    .perk-item:hover {
+      border-color: var(--cyan-neon);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 240, 255, 0.15);
+    }
+
+    .perk-icon {
+      font-size: 1.6rem;
+      color: var(--yellow-speed);
+      min-width: 36px;
+      text-align: center;
+    }
+
+    .perk-info h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .perk-info p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       CATÁLOGO DE JUEGOS DISPONIBLES
+       ============================================================ */
+    .section-header {
+      text-align: center;
+      margin: 70px 0 40px;
+    }
+
+    .section-subtitle {
+      color: var(--cyan-neon);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 10px auto 0;
+    }
+
+    /* Filtros por Categoría */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--cyan-neon);
+      color: #fff;
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--f1-red), #e63946);
+      border-color: var(--f1-red);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(255, 24, 1, 0.4);
+    }
+
+    /* Grid de Juegos */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 26px;
+    }
+
+    .game-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .game-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--cyan-neon);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 240, 255, 0.25);
+    }
+
+    .game-card-banner {
+      height: 160px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .game-banner-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+      filter: brightness(0.75);
+    }
+
+    .game-card:hover .game-banner-bg {
+      transform: scale(1.08);
+      filter: brightness(0.9);
+    }
+
+    .game-currency-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(7, 9, 19, 0.85);
+      border: 1px solid var(--yellow-speed);
+      color: var(--yellow-speed);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .game-category-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      background: rgba(0, 240, 255, 0.2);
+      border: 1px solid var(--cyan-neon);
+      color: var(--cyan-neon);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .game-card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .game-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .game-currency-name {
+      color: var(--yellow-speed);
+      font-size: 0.86rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .game-req-box {
+      background: rgba(7, 9, 19, 0.65);
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      margin-bottom: 18px;
+    }
+
+    .game-req-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .game-req-value {
+      font-size: 0.85rem;
+      color: #fff;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .game-req-value i {
+      color: var(--cyan-neon);
+    }
+
+    .game-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .game-price-from {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-from-label {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+
+    .price-from-val {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--green-neon);
+    }
+
+    .btn-recharge-card {
+      background: linear-gradient(135deg, var(--cyan-neon), #0099ff);
+      color: #000;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 9px 16px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-recharge-card:hover {
+      background: linear-gradient(135deg, #fff, var(--cyan-neon));
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    }
+
+    /* ============================================================
+       INVESTIGACIÓN: TABLA EXPLICATIVA DE REQUISITOS POR JUEGO
+       ============================================================ */
+    .research-section {
+      margin: 80px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      position: relative;
+    }
+
+    .research-table-wrap {
+      overflow-x: auto;
+      margin-top: 25px;
+    }
+
+    .research-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .research-table th {
+      background: rgba(7, 9, 19, 0.9);
+      padding: 16px 20px;
+      color: var(--cyan-neon);
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid rgba(0, 240, 255, 0.3);
+    }
+
+    .research-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.9rem;
+    }
+
+    .research-table tr:hover td {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .badge-id-type {
+      background: rgba(255, 208, 0, 0.15);
+      border: 1px solid var(--yellow-speed);
+      color: var(--yellow-speed);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* ============================================================
+       MODAL DE RECARGA INTERACTIVO (PASO A PASO)
+       ============================================================ */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(4, 6, 12, 0.88);
+      backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      background: linear-gradient(160deg, #10162a, #090d1c);
+      border: 2px solid var(--cyan-neon);
+      border-radius: var(--radius-xl);
+      max-width: 720px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 34px;
+      position: relative;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 240, 255, 0.25);
+      transform: translateY(20px) scale(0.97);
+      transition: var(--transition);
+    }
+
+    .modal-overlay.active .modal-box {
+      transform: translateY(0) scale(1);
+    }
+
+    .btn-close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .btn-close-modal:hover {
+      background: var(--f1-red);
+      transform: rotate(90deg);
+    }
+
+    .modal-game-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .modal-game-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: #000;
+      border: 2px solid var(--yellow-speed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--yellow-speed);
+    }
+
+    .modal-game-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .modal-game-info span {
+      color: var(--cyan-neon);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Pasos del Formulario */
+    .step-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--yellow-speed);
+      font-weight: 800;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .input-group-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .input-group-row.two-cols {
+      grid-template-columns: 1.4fr 1fr;
+    }
+
+    .form-input-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-input-wrap label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .form-input {
+      background: rgba(7, 9, 19, 0.8);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-input:focus {
+      border-color: var(--cyan-neon);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+    }
+
+    .guide-tip-btn {
+      color: var(--cyan-neon);
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 4px;
+      text-align: left;
+    }
+
+    .guide-tip-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* Paquetes de Monedas */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .package-card {
+      background: rgba(7, 9, 19, 0.75);
+      border: 2px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .package-card:hover {
+      border-color: var(--cyan-neon);
+      transform: translateY(-2px);
+    }
+
+    .package-card.active {
+      border-color: var(--yellow-speed);
+      background: rgba(255, 208, 0, 0.08);
+      box-shadow: 0 0 15px rgba(255, 208, 0, 0.3);
+    }
+
+    .pkg-tag {
+      position: absolute;
+      top: -8px;
+      right: 8px;
+      background: var(--f1-red);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 8px;
+      text-transform: uppercase;
+    }
+
+    .pkg-amount {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      margin-top: 4px;
+    }
+
+    .pkg-currency-type {
+      font-size: 0.72rem;
+      color: var(--yellow-speed);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .pkg-price {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--green-neon);
+    }
+
+    /* Métodos de Pago */
+    .payments-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .payment-option {
+      background: rgba(7, 9, 19, 0.75);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-sm);
+      padding: 10px 8px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .payment-option i {
+      font-size: 1.2rem;
+      color: var(--cyan-neon);
+    }
+
+    .payment-option.active {
+      border-color: var(--cyan-neon);
+      background: rgba(0, 240, 255, 0.1);
+      color: #fff;
+    }
+
+    /* Botón de Enviar a Toda Velocidad */
+    .btn-submit-suanfonson {
+      width: 100%;
+      background: linear-gradient(90deg, var(--f1-red), var(--yellow-speed));
+      color: #000;
+      font-family: var(--font-brand);
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      padding: 16px;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: var(--transition);
+      box-shadow: 0 10px 25px rgba(255, 24, 1, 0.4);
+      text-transform: uppercase;
+    }
+
+    .btn-submit-suanfonson:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(255, 208, 0, 0.6);
+      background: linear-gradient(90deg, var(--yellow-speed), #fff);
+    }
+
+    /* ============================================================
+       TICKET DE CONFIRMACIÓN / VOUCHER (SUANFONSON SPEED)
+       ============================================================ */
+    .voucher-card {
+      background: rgba(7, 9, 19, 0.95);
+      border: 2px solid var(--green-neon);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Guía Desplegable de Ayuda */
+    .helper-box {
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid var(--cyan-neon);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      display: none;
+    }
+
+    /* ============================================================
+       SECCIÓN TESTIMONIOS Y MEME CORNER
+       ============================================================ */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 40px 0 80px;
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      position: relative;
+    }
+
+    .testi-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .testi-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan-neon), var(--purple-neon));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #000;
+    }
+
+    .testi-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .testi-game {
+      font-size: 0.75rem;
+      color: var(--yellow-speed);
+    }
+
+    .testi-text {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      background: #04050a;
+      border-top: 1px solid var(--border-card);
+      padding: 60px 0 30px;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .footer-copy {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-banner-card {
+        height: 540px;
+      }
+      .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .perks-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .payments-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+      .perks-strip {
+        grid-template-columns: 1fr;
+      }
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       BARRA DE NAVEGACIÓN
+       ============================================================ -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-group">
+        <div class="brand-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">El Suanfonson</span>
+          <span class="brand-tag">Gaming Top-Up Store</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#catalogo"><i class="fas fa-gamepad"></i> Juegos</a></li>
+        <li><a href="#investigacion"><i class="fas fa-id-card"></i> Guía de IDs</a></li>
+        <li><a href="#origen"><i class="fas fa-flag-checkered"></i> El Meme</a></li>
+        <li><a href="#testimonios"><i class="fas fa-star"></i> Opiniones</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Selector de Moneda -->
+        <select class="currency-select" id="currencySelect" onchange="changeCurrency(this.value)">
+          <option value="USD" selected>USD ($)</option>
+          <option value="VES">VES (Bs.)</option>
+          <option value="COP">COP ($)</option>
+          <option value="MXN">MXN ($)</option>
+          <option value="EUR">EUR (€)</option>
+        </select>
+
+        <!-- Botón de Sonido del Suanfonson -->
+        <button class="btn-speed-sound" onclick="playSuanfonsonSound()" title="¡Escucha el Suanfonson a fondo!">
+          <i class="fas fa-volume-high"></i>
+          <span>¡SUANFONSON!</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO COVER: FOTO DE PORTADA CON EL CREADOR DEL SUANFONSON
+       ============================================================ -->
+  <header class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-banner-card">
+        <!-- Foto de Portada con Carlos Julio Dickson (El creador del Suanfonson) -->
+        <img 
+          src="suanfonson_cover.jpg" 
+          alt="Carlos Julio Dickson en la hamaca explicando El Suanfonson en Punto Fijo, Falcon, Venezuela" 
+          class="hero-bg-img"
+        >
+        <div class="hero-overlay-gradient"></div>
+
+        <div class="hero-content">
+          <div class="hero-text-area">
+            <div class="suanfonson-meme-tag">
+              <i class="fas fa-flag-checkered"></i>
+              <span>El Origen Viral • Carlos Julio Dickson</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Recargas a la velocidad del <span>Suanfonson</span>
+            </h1>
+
+            <p class="hero-quote">
+              "El suanfonson... ese sonido que hacen los carros de Fórmula 1 cuando van en la recta a 300 km/h: 
+              <strong>¡suaaan-fon-sooon!</strong> Así de rápido te llegan tus diamantes, CP y pases de batalla."
+            </p>
+          </div>
+
+          <div class="hero-badge-box">
+            <div class="speed-meter">
+              <i class="fas fa-gauge-high"></i>
+              <span>0.4s</span>
+            </div>
+            <div class="speed-label">Tiempo de entrega garantizado</div>
+            <div style="margin-top: 10px; font-size: 0.72rem; color: var(--green-neon); font-weight: 700;">
+              <i class="fas fa-circle-check"></i> 100% Oficial & Anti-Ban
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de Ventajas Rápidas -->
+      <div class="perks-strip">
+        <div class="perk-item">
+          <i class="fas fa-bolt-lightning perk-icon"></i>
+          <div class="perk-info">
+            <h4>Entrega Inmediata</h4>
+            <p>Directo a tu ID sin esperas ni contraseñas.</p>
+          </div>
+        </div>
+
+        <div class="perk-item">
+          <i class="fas fa-shield-halved perk-icon"></i>
+          <div class="perk-info">
+            <h4>Recargas Oficiales</h4>
+            <p>Conexión directa con Riot, Garena, EA y Moonton.</p>
+          </div>
+        </div>
+
+        <div class="perk-item">
+          <i class="fas fa-wallet perk-icon"></i>
+          <div class="perk-info">
+            <h4>Pago Local & Cripto</h4>
+            <p>Pago Móvil, Tarjetas, Binance USDT y PayPal.</p>
+          </div>
+        </div>
+
+        <div class="perk-item">
+          <i class="fas fa-headset perk-icon"></i>
+          <div class="perk-info">
+            <h4>Soporte Fuácata 24/7</h4>
+            <p>Atención al instante por WhatsApp y Telegram.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       CATÁLOGO DE JUEGOS Y RECARGAS
+       ============================================================ -->
+  <section class="container" id="catalogo">
+    <div class="section-header">
+      <span class="section-subtitle">Tus Juegos Favoritos</span>
+      <h2 class="section-title">Elige tu Juego y Recarga en un Suanfonson</h2>
+      <p class="section-desc">
+        Selecciona tu título para ver todos los paquetes de monedas disponibles, precios actualizados y el identificador exacto de tu cuenta.
+      </p>
+    </div>
+
+    <!-- Filtros de Categoría -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterGames('all', this)">Todos los Juegos (8)</button>
+      <button class="filter-btn" onclick="filterGames('battle-royale', this)">Battle Royale</button>
+      <button class="filter-btn" onclick="filterGames('moba', this)">MOBA</button>
+      <button class="filter-btn" onclick="filterGames('sports-strat', this)">Deportes & Estrategia</button>
+    </div>
+
+    <!-- Grid de Tarjetas de Juegos -->
+    <div class="games-grid" id="gamesGrid">
+      <!-- Se genera dinámicamente con JavaScript -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INVESTIGACIÓN DETALLADA: ¿QUÉ SE LE PIDE A CADA USUARIO?
+       ============================================================ */
+  <section class="container" id="investigacion">
+    <div class="research-section">
+      <div style="text-align: center; margin-bottom: 25px;">
+        <span class="section-subtitle" style="color: var(--yellow-speed);">Investigación Técnica y Guía de Seguridad</span>
+        <h2 class="section-title" style="font-size: 2.2rem;">¿Qué dato se le pide a cada usuario para recargar?</h2>
+        <p class="section-desc">
+          Para garantizar la máxima seguridad, <strong>NUNCA pedimos tu contraseña</strong>. Solo requerimos tu identificador público oficial según la arquitectura de cada juego:
+        </p>
+      </div>
+
+      <div class="research-table-wrap">
+        <table class="research-table">
+          <thead>
+            <tr>
+              <th>Videojuego</th>
+              <th>Moneda Oficial</th>
+              <th>Dato Solicitado</th>
+              <th>Formato / Ejemplo</th>
+              <th>¿Dónde se encuentra en el juego?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Call of Duty: Mobile</strong></td>
+              <td><span style="color: var(--yellow-speed); font-weight:700;">COD Points (CP)</span></td>
+              <td><span class="badge-id-type">Player ID (UID numérico)</span></td>
+              <td><code>6748920194857291048</code> (19 dígitos)</td>
+              <td>Toca tu avatar > Pestaña "BÁSICO" > Copia el número debajo de tu nombre.</td>
+            </tr>
+            <tr>
+              <td><strong>EA Sports FC / FIFA Mobile</strong></td>
+              <td><span style="color: var(--green-neon); font-weight:700;">FC Points / FIFA Points</span></td>
+              <td><span class="badge-id-type">UID de Jugador</span></td>
+              <td><code>849302847192</code> (Numérico)</td>
+              <td>Ajustes (engranaje) > "Información de cuenta" o perfil de usuario.</td>
+            </tr>
+            <tr>
+              <td><strong>Mobile Legends: Bang Bang</strong></td>
+              <td><span style="color: var(--cyan-neon); font-weight:700;">Diamantes (MLBB)</span></td>
+              <td><span class="badge-id-type">User ID + Zone ID (Servidor)</span></td>
+              <td><code>12345678</code> y Zona: <code>(2045)</code></td>
+              <td>Toca tu avatar > Pestaña "Básico" > Se requieren <strong>AMBOS</strong> números.</td>
+            </tr>
+            <tr>
+              <td><strong>Free Fire</strong></td>
+              <td><span style="color: var(--cyan-neon); font-weight:700;">Diamantes Free Fire</span></td>
+              <td><span class="badge-id-type">Player ID (UID numérico)</span></td>
+              <td><code>1928374650</code> (9 a 10 dígitos)</td>
+              <td>Toca tu perfil arriba a la izquierda > botón copiar al lado de "UID".</td>
+            </tr>
+            <tr>
+              <td><strong>League of Legends (PC)</strong></td>
+              <td><span style="color: #ff9900; font-weight:700;">Riot Points (RP)</span></td>
+              <td><span class="badge-id-type">Riot ID + Región/Servidor</span></td>
+              <td><code>Faker#KR1</code> o <code>Suanfon#LAN</code></td>
+              <td>Tu Riot ID con #Lema visible en el cliente de Riot + selección de servidor (LAN/LAS).</td>
+            </tr>
+            <tr>
+              <td><strong>Clash Royale</strong></td>
+              <td><span style="color: var(--green-neon); font-weight:700;">Gemas & Pass Royale</span></td>
+              <td><span class="badge-id-type">Player Tag (#Etiqueta)</span></td>
+              <td><code>#8PY2G9LR</code> (Inicia con #)</td>
+              <td>Abre tu perfil debajo de tu apodo > Toca la etiqueta con '#' para copiar.</td>
+            </tr>
+            <tr>
+              <td><strong>PUBG Mobile</strong></td>
+              <td><span style="color: #ffd000; font-weight:700;">Unknown Cash (UC)</span></td>
+              <td><span class="badge-id-type">Character ID (Numérico)</span></td>
+              <td><code>5129384756</code> (10 u 11 dígitos)</td>
+              <td>Toca tu avatar en la esquina superior > Copia el número junto a tu nickname.</td>
+            </tr>
+            <tr>
+              <td><strong>LoL: Wild Rift</strong></td>
+              <td><span style="color: var(--cyan-neon); font-weight:700;">Wild Cores</span></td>
+              <td><span class="badge-id-type">Riot ID con Lema (#)</span></td>
+              <td><code>YasuoKing#LAN</code></td>
+              <td>Toca tu foto de perfil en el lobby > Copia tu Riot ID completo con hashtag.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HISTORIA DEL SUANFONSON: EL MEME QUE INSPIRÓ LA TIENDA
+       ============================================================ -->
+  <section class="container" id="origen" style="margin-bottom: 70px;">
+    <div style="background: linear-gradient(135deg, rgba(255, 24, 1, 0.1), rgba(0, 240, 255, 0.1)); border: 1px solid var(--border-glow); border-radius: var(--radius-xl); padding: 36px; display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <div style="flex: 1; min-width: 300px;">
+        <span class="section-subtitle" style="color: var(--f1-red);">Cultura Pop de Internet</span>
+        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 12px;">
+          ¿De dónde salió la palabra "El Suanfonson"?
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 14px;">
+          Nació a mediados de 2020 gracias al venezolano <strong>Carlos Julio Dickson</strong> en Punto Fijo, Estado Falcón. 
+          En un video viral acostado en su hamaca, explicó que el <em>suanfonson</em> es la onomatopeya del sonido de los carros de Fórmula 1 cuando pasan rugiendo a máxima velocidad: 
+          <em style="color: var(--yellow-speed);">"Suaaan-fon-sooon... ¡y fuácata!"</em>.
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          El fenómeno fue tan viral que hasta la <strong>Real Academia Española (RAE)</strong> analizó públicamente el neologismo. 
+          Por eso, en nuestra tienda no hay colas ni esperas: tu recarga viaja a la velocidad exacta del Suanfonson.
+        </p>
+      </div>
+
+      <div style="background: rgba(7, 9, 19, 0.85); border: 2px dashed var(--yellow-speed); border-radius: var(--radius-lg); padding: 24px; text-align: center; max-width: 340px; margin: 0 auto;">
+        <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--yellow-speed); margin-bottom: 10px;"></i>
+        <h4 style="font-family: var(--font-brand); color: #fff; font-size: 1.15rem; margin-bottom: 8px;">"EL SUANFONSON"</h4>
+        <p style="font-size: 0.85rem; color: var(--cyan-neon); font-weight: 600;">
+          Sustantivo. Fenómeno acústico y temporal caracterizado por una aceleración instantánea e imparable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OPINIONES DE GAMERS SATISFECHOS
+       ============================================================ -->
+  <section class="container" id="testimonios">
+    <div class="section-header">
+      <span class="section-subtitle">Gamers 100% Satisfechos</span>
+      <h2 class="section-title">Comentarios a Toda Velocidad</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testi-header">
+          <div class="testi-avatar">FF</div>
+          <div>
+            <div class="testi-name">Kevin "Headshot"</div>
+            <div class="testi-game">Free Fire • 1,060 Diamantes</div>
+          </div>
+        </div>
+        <p class="testi-text">
+          "Pedí la recarga en plena sala clasificatoria y cuando miré el saldo ya estaban los diamantes listos. Literalmente fue un suanfonson."
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-header">
+          <div class="testi-avatar" style="background: linear-gradient(135deg, var(--yellow-speed), var(--f1-red));">COD</div>
+          <div>
+            <div class="testi-name">Valeria M.</div>
+            <div class="testi-game">Call of Duty Mobile • 2,400 CP</div>
+          </div>
+        </div>
+        <p class="testi-text">
+          "Compré los CP para la ruleta mítica y solo necesité mi UID numérico. 10 de 10, nada de pedirme contraseñas raras."
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-header">
+          <div class="testi-avatar" style="background: linear-gradient(135deg, var(--green-neon), var(--cyan-neon));">ML</div>
+          <div>
+            <div class="testi-name">Ángel "Tigreal"</div>
+            <div class="testi-game">Mobile Legends • Pase Semanal</div>
+          </div>
+        </div>
+        <p class="testi-text">
+          "Me encantó que te expliquen clarito dónde está el User ID y el Zone ID. Pagué por Pago Móvil y llegó fuácata al segundo."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MODAL DE RECARGA INTERACTIVO
+       ============================================================ -->
+  <div class="modal-overlay" id="rechargeModal" onclick="closeModalOnBg(event)">
+    <div class="modal-box">
+      <button class="btn-close-modal" onclick="closeRechargeModal()">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Cabecera del Juego Seleccionado -->
+      <div class="modal-game-header">
+        <div class="modal-game-icon" id="modalGameIcon">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <div class="modal-game-info">
+          <h3 id="modalGameTitle">Juego</h3>
+          <span id="modalGameCurrency">Moneda Oficial</span>
+        </div>
+      </div>
+
+      <!-- Formulario de Recarga -->
+      <form id="rechargeForm" onsubmit="processRecharge(event)">
+        
+        <!-- PASO 1: IDENTIFICACIÓN DE CUENTA -->
+        <div class="step-title">
+          <i class="fas fa-1"></i>
+          <span id="step1Title">Ingresa los datos de tu cuenta</span>
+        </div>
+
+        <div id="dynamicInputsContainer" class="input-group-row">
+          <!-- Rellenado dinámicamente según lo que pide cada juego -->
+        </div>
+
+        <!-- Guía de ayuda desplegable -->
+        <button type="button" class="guide-tip-btn" id="btnToggleGuide" onclick="toggleHelpGuide()">
+          <i class="fas fa-circle-question"></i>
+          <span id="guideTipText">¿Dónde encuentro este dato en el juego?</span>
+        </button>
+
+        <div class="helper-box" id="helperBox">
+          <!-- Texto de ayuda específico -->
+        </div>
+
+        <!-- PASO 2: SELECCIÓN DEL PAQUETE DE MONEDAS -->
+        <div class="step-title" style="margin-top: 25px;">
+          <i class="fas fa-2"></i>
+          <span>Selecciona tu paquete de recarga</span>
+        </div>
+
+        <div class="packages-grid" id="packagesGrid">
+          <!-- Renderizado dinámicamente -->
+        </div>
+
+        <!-- PASO 3: SELECCIÓN DE MÉTODO DE PAGO -->
+        <div class="step-title">
+          <i class="fas fa-3"></i>
+          <span>Método de pago inmediato</span>
+        </div>
+
+        <div class="payments-row">
+          <div class="payment-option active" onclick="selectPayment(this, 'Pago Móvil / Transferencia')">
+            <i class="fas fa-mobile-screen-button"></i>
+            <span>Pago Móvil</span>
+          </div>
+          <div class="payment-option" onclick="selectPayment(this, 'Binance Pay / USDT')">
+            <i class="fab fa-bitcoin"></i>
+            <span>Binance USDT</span>
+          </div>
+          <div class="payment-option" onclick="selectPayment(this, 'Tarjeta Débito / Crédito')">
+            <i class="fas fa-credit-card"></i>
+            <span>Tarjeta Débito/Crédito</span>
+          </div>
+          <div class="payment-option" onclick="selectPayment(this, 'PayPal')">
+            <i class="fab fa-paypal"></i>
+            <span>PayPal</span>
+          </div>
+        </div>
+
+        <!-- Resumen de Costo y Botón de Envío -->
+        <div style="background: rgba(7, 9, 19, 0.8); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Total a pagar:</span>
+            <div id="modalTotalPrice" style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 900; color: var(--green-neon);">$0.00</div>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.75rem; color: var(--cyan-neon); font-weight: 700;">
+              <i class="fas fa-bolt"></i> Entrega: Instantánea
+            </span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit-suanfonson" id="btnSubmitRecarga">
+          <i class="fas fa-plane-departure"></i>
+          <span>¡Recargar en un Suanfonson! 🏎️💨</span>
+        </button>
+      </form>
+
+      <!-- Ticket / Voucher de Éxito -->
+      <div class="voucher-card" id="voucherCard">
+        <i class="fas fa-circle-check" style="font-size: 3.5rem; color: var(--green-neon); margin-bottom: 12px; display: block;"></i>
+        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 8px;">
+          ¡RECARGA ENVIADA EN UN SUANFONSON! ⚡
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 18px;">
+          Tus monedas han sido abonadas exitosamente a tu cuenta de juego con entrega fuácata inmediata.
+        </p>
+
+        <div style="background: rgba(16, 20, 38, 0.9); border: 1px dashed var(--yellow-speed); border-radius: var(--radius-md); padding: 18px; text-align: left; margin-bottom: 22px; font-size: 0.88rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: var(--text-muted);">Juego:</span>
+            <strong id="vchGame" style="color: #fff;">-</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: var(--text-muted);">ID de Cuenta:</span>
+            <strong id="vchAccount" style="color: var(--cyan-neon);">-</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: var(--text-muted);">Monedas Recargadas:</span>
+            <strong id="vchCurrency" style="color: var(--yellow-speed);">-</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: var(--text-muted);">Monto Pagado:</span>
+            <strong id="vchPrice" style="color: var(--green-neon);">-</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted);">Velocidad de Envío:</span>
+            <strong style="color: var(--f1-red);">0.3 Segundos (Suanfonson F1)</strong>
+          </div>
+        </div>
+
+        <button class="btn-submit-suanfonson" onclick="resetAndCloseModal()">
+          <i class="fas fa-check"></i>
+          <span>Entendido, volver a la tienda</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="brand-group">
+          <div class="brand-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="brand-titles">
+            <span class="brand-name">El Suanfonson</span>
+            <span class="brand-tag">Gaming Top-Up Store</span>
+          </div>
+        </div>
+
+        <div class="footer-copy">
+          © 2026 El Suanfonson Recargas. Todos los nombres, logotipos y monedas son propiedad de sus respectivos desarrolladores (Activision, EA, Garena, Riot Games, Supercell, Moonton, Tencent).
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       LÓGICA JAVASCRIPT DE RECARGAS Y CONVERSIÓN
+       ============================================================ -->
+  <script>
+    /* ============================================================
+       BASE DE DATOS COMPLETA DE LOS 8 JUEGOS Y SUS MONEDAS
+       ============================================================ */
+    const GAMES_DATA = [
+      {
+        id: "cod-mobile",
+        title: "Call of Duty: Mobile",
+        category: "battle-royale",
+        currencyName: "COD Points (CP)",
+        icon: "fa-crosshairs",
+        bgImage: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80",
+        idType: "Player ID (UID numérico de 19 dígitos)",
+        reqFields: [
+          { name: "uid", label: "Player UID (Numérico)", placeholder: "Ej: 6748920194857291048", type: "text" }
+        ],
+        guide: "Abre COD Mobile > Toca tu avatar en la esquina superior izquierda > En la pestaña 'BÁSICO', debajo de tu nombre verás tu 'UID' numérico de 19 dígitos. Toca el botón copiar.",
+        packages: [
+          { amount: "80 CP", priceUSD: 0.99, tag: "" },
+          { amount: "420 CP", priceUSD: 4.99, tag: "+20 Gratis" },
+          { amount: "880 CP", priceUSD: 9.99, tag: "Pase de Batalla" },
+          { amount: "2,400 CP", priceUSD: 24.99, tag: "+400 Extra" },
+          { amount: "5,000 CP", priceUSD: 49.99, tag: "Popular" },
+          { amount: "10,800 CP", priceUSD: 99.99, tag: "Mejor Valor" }
+        ]
+      },
+      {
+        id: "ea-fc-mobile",
+        title: "EA Sports FC / FIFA",
+        category: "sports-strat",
+        currencyName: "FC Points / FIFA Points",
+        icon: "fa-futbol",
+        bgImage: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80",
+        idType: "UID de Jugador (ID Numérico)",
+        reqFields: [
+          { name: "uid", label: "UID de Usuario de EA FC", placeholder: "Ej: 849302847192", type: "text" }
+        ],
+        guide: "Entra a EA FC Mobile > Toca el ícono de Ajustes (Engranaje) en la esquina superior derecha > Presiona 'Información de Cuenta' y copia tu UID de jugador.",
+        packages: [
+          { amount: "100 FC Points", priceUSD: 0.99, tag: "" },
+          { amount: "500 + 20 FC", priceUSD: 4.99, tag: "" },
+          { amount: "1,050 + 100 FC", priceUSD: 9.99, tag: "Pase Estrella" },
+          { amount: "2,200 + 300 FC", priceUSD: 19.99, tag: "" },
+          { amount: "5,750 + 1,000 FC", priceUSD: 49.99, tag: "Popular" },
+          { amount: "12,000 FC Points", priceUSD: 99.99, tag: "Mejor Valor" }
+        ]
+      },
+      {
+        id: "mobile-legends",
+        title: "Mobile Legends: Bang Bang",
+        category: "moba",
+        currencyName: "Diamantes (Diamonds)",
+        icon: "fa-gem",
+        bgImage: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80",
+        idType: "User ID + Zone ID (Servidor)",
+        reqFields: [
+          { name: "uid", label: "User ID", placeholder: "Ej: 12345678", type: "text" },
+          { name: "zone", label: "Zone ID (Zona)", placeholder: "Ej: 2045", type: "text" }
+        ],
+        guide: "Toca tu avatar arriba a la izquierda del lobby. En la pestaña 'Básico', debajo de tu apodo verás algo como 'ID: 12345678 (2045)'. El primer número es tu User ID y el que está entre paréntesis es tu Zone ID.",
+        packages: [
+          { amount: "50 + 5 Diamantes", priceUSD: 0.99, tag: "" },
+          { amount: "Pase Semanal", priceUSD: 1.99, tag: "Recomendado" },
+          { amount: "250 + 25 Diamantes", priceUSD: 4.79, tag: "" },
+          { amount: "500 + 65 Diamantes", priceUSD: 9.49, tag: "Popular" },
+          { amount: "1,000 + 155 Diams", priceUSD: 18.99, tag: "Epic Skin" },
+          { amount: "5,000 + 1,000 Diams", priceUSD: 94.99, tag: "VIP" }
+        ]
+      },
+      {
+        id: "free-fire",
+        title: "Free Fire",
+        category: "battle-royale",
+        currencyName: "Diamantes Free Fire",
+        icon: "fa-fire",
+        bgImage: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=600&q=80",
+        idType: "Player ID (UID numérico de 9 a 10 dígitos)",
+        reqFields: [
+          { name: "uid", label: "Player ID (UID)", placeholder: "Ej: 1928374650", type: "text" }
+        ],
+        guide: "Abre Free Fire > Toca tu perfil de jugador arriba a la izquierda > Justo debajo de tu apodo verás 'UID' con un botón amarillo para copiar tu código numérico.",
+        packages: [
+          { amount: "100 + 10 Diamantes", priceUSD: 0.99, tag: "" },
+          { amount: "Tarjeta Semanal", priceUSD: 1.99, tag: "Ahorro" },
+          { amount: "310 + 31 Diamantes", priceUSD: 2.99, tag: "" },
+          { amount: "520 + 52 Diamantes", priceUSD: 4.99, tag: "Pase Booyah" },
+          { amount: "1,060 + 106 Diams", priceUSD: 9.99, tag: "Más Vendido" },
+          { amount: "2,180 + 218 Diams", priceUSD: 19.99, tag: "Doble Bonus" }
+        ]
+      },
+      {
+        id: "league-of-legends",
+        title: "League of Legends (PC)",
+        category: "moba",
+        currencyName: "Riot Points (RP)",
+        icon: "fa-shield-cat",
+        bgImage: "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80",
+        idType: "Riot ID (#Lema) + Región",
+        reqFields: [
+          { name: "riotId", label: "Riot ID con Lema (#)", placeholder: "Ej: Faker#KR1 o Usuario#LAN", type: "text" },
+          { name: "region", label: "Servidor / Región", placeholder: "LAN / LAS / NA", type: "select", options: ["LAN (Latam Norte)", "LAS (Latam Sur)", "NA (Norteamérica)", "EUW (Europa Oeste)"] }
+        ],
+        guide: "Tu Riot ID se compone de tu nombre visible en el cliente de Riot seguido de una almohadilla y lema (ej: Invocador#LAN). Asegúrate de especificar tu servidor de juego.",
+        packages: [
+          { amount: "575 RP", priceUSD: 4.99, tag: "" },
+          { amount: "1,380 RP", priceUSD: 10.99, tag: "Skin Épica" },
+          { amount: "2,800 RP", priceUSD: 21.99, tag: "Popular" },
+          { amount: "4,500 RP", priceUSD: 34.99, tag: "Pase de Evento" },
+          { amount: "6,500 RP", priceUSD: 49.99, tag: "" },
+          { amount: "13,500 RP", priceUSD: 99.99, tag: "Mejor Valor" }
+        ]
+      },
+      {
+        id: "clash-royale",
+        title: "Clash Royale",
+        category: "sports-strat",
+        currencyName: "Gemas & Pass Royale",
+        icon: "fa-crown",
+        bgImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+        idType: "Player Tag (#Etiqueta que empieza con #)",
+        reqFields: [
+          { name: "tag", label: "Player Tag (#Etiqueta)", placeholder: "Ej: #8PY2G9LR", type: "text" }
+        ],
+        guide: "Abre Clash Royale > Toca tu nombre en la pantalla principal para ver tu perfil > Justo debajo de tu nombre verás tu etiqueta que empieza con '#'. Toca para copiarla.",
+        packages: [
+          { amount: "80 Gemas", priceUSD: 0.99, tag: "" },
+          { amount: "500 Gemas", priceUSD: 4.99, tag: "" },
+          { amount: "Pass Royale Oro", priceUSD: 5.99, tag: "Pase Mensual" },
+          { amount: "1,200 Gemas", priceUSD: 9.99, tag: "Popular" },
+          { amount: "Pass Diamante", priceUSD: 11.99, tag: "Exclusivo" },
+          { amount: "2,500 Gemas", priceUSD: 19.99, tag: "Mejor Valor" }
+        ]
+      },
+      {
+        id: "pubg-mobile",
+        title: "PUBG Mobile",
+        category: "battle-royale",
+        currencyName: "Unknown Cash (UC)",
+        icon: "fa-helmet-un",
+        bgImage: "https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=600&q=80",
+        idType: "Character ID (Numérico de 10 a 11 dígitos)",
+        reqFields: [
+          { name: "uid", label: "Character ID Numérico", placeholder: "Ej: 5129384756", type: "text" }
+        ],
+        guide: "Toca tu foto de perfil en la esquina superior derecha del lobby. Tu Character ID numérico aparece al lado de tu apodo. Toca el botón de copiar.",
+        packages: [
+          { amount: "60 UC", priceUSD: 0.99, tag: "" },
+          { amount: "300 + 25 UC", priceUSD: 4.99, tag: "" },
+          { amount: "600 + 60 UC", priceUSD: 9.99, tag: "Royale Pass" },
+          { amount: "1,500 + 300 UC", priceUSD: 24.99, tag: "" },
+          { amount: "3,000 + 850 UC", priceUSD: 49.99, tag: "Popular" },
+          { amount: "6,000 + 2,100 UC", priceUSD: 99.99, tag: "Ultra Value" }
+        ]
+      },
+      {
+        id: "wild-rift",
+        title: "LoL: Wild Rift",
+        category: "moba",
+        currencyName: "Wild Cores",
+        icon: "fa-dragon",
+        bgImage: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
+        idType: "Riot ID con Lema (#)",
+        reqFields: [
+          { name: "riotId", label: "Riot ID con Lema (#)", placeholder: "Ej: Campeon#1234", type: "text" }
+        ],
+        guide: "En el lobby de Wild Rift, presiona tu foto de perfil arriba a la izquierda. Verás tu Riot ID con su almohadilla (ej: Nick#0000). Toca el icono para copiarlo completo.",
+        packages: [
+          { amount: "425 Wild Cores", priceUSD: 3.99, tag: "" },
+          { amount: "1,000 + 50 Cores", priceUSD: 9.99, tag: "Wild Pass" },
+          { amount: "2,050 + 150 Cores", priceUSD: 19.99, tag: "" },
+          { amount: "3,650 + 350 Cores", priceUSD: 34.99, tag: "Popular" },
+          { amount: "5,350 + 650 Cores", priceUSD: 49.99, tag: "" },
+          { amount: "11,000 + 1,500 Cores", priceUSD: 99.99, tag: "Mayor Valor" }
+        ]
+      }
+    ];
+
+    /* Divisas Disponibles */
+    const CURRENCIES = {
+      USD: { symbol: "$", rate: 1.0, prefix: "$" },
+      VES: { symbol: "Bs.", rate: 45.0, prefix: "Bs. " },
+      COP: { symbol: "COL$", rate: 4200.0, prefix: "COL$ " },
+      MXN: { symbol: "MX$", rate: 19.8, prefix: "MX$ " },
+      EUR: { symbol: "€", rate: 0.92, prefix: "€" }
+    };
+
+    let currentCurrency = "USD";
+    let activeGame = null;
+    let selectedPackage = null;
+    let selectedPaymentMethod = "Pago Móvil / Transferencia";
+
+    /* Formatear Moneda */
+    function formatMoney(amountUSD) {
+      const cur = CURRENCIES[currentCurrency];
+      const val = amountUSD * cur.rate;
+      if (currentCurrency === "COP" || currentCurrency === "VES") {
+        return `${cur.prefix}${Math.round(val).toLocaleString()}`;
+      }
+      return `${cur.prefix}${val.toFixed(2)}`;
+    }
+
+    function changeCurrency(val) {
+      currentCurrency = val;
+      renderGamesGrid();
+      if (activeGame && selectedPackage) {
+        document.getElementById('modalTotalPrice').textContent = formatMoney(selectedPackage.priceUSD);
+        renderPackages(activeGame);
+      }
+    }
+
+    /* Renderizar el Catálogo de Juegos */
+    function renderGamesGrid(filter = "all") {
+      const grid = document.getElementById('gamesGrid');
+      const filtered = GAMES_DATA.filter(g => filter === "all" || g.category === filter);
+
+      grid.innerHTML = filtered.map(game => {
+        const minPrice = Math.min(...game.packages.map(p => p.priceUSD));
+        return `
+          <div class="game-card" onclick="openRechargeModal('${game.id}')">
+            <div class="game-card-banner">
+              <div class="game-banner-bg" style="background-image: url('${game.bgImage}');"></div>
+              <div class="game-currency-badge">
+                <i class="fas ${game.icon}"></i>
+                <span>${game.currencyName.split(' ')[0]}</span>
+              </div>
+              <div class="game-category-tag">${game.category.replace('-', ' ')}</div>
+            </div>
+
+            <div class="game-card-body">
+              <h3 class="game-card-title">${game.title}</h3>
+              <div class="game-currency-name">
+                <i class="fas fa-coins"></i>
+                <span>${game.currencyName}</span>
+              </div>
+
+              <div class="game-req-box">
+                <span class="game-req-label">Se te pide para recargar:</span>
+                <span class="game-req-value">
+                  <i class="fas fa-id-badge"></i>
+                  ${game.idType}
+                </span>
+              </div>
+
+              <div class="game-card-footer">
+                <div class="game-price-from">
+                  <span class="price-from-label">Desde</span>
+                  <span class="price-from-val">${formatMoney(minPrice)}</span>
+                </div>
+
+                <button class="btn-recharge-card">
+                  <span>Recargar</span>
+                  <i class="fas fa-bolt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterGames(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderGamesGrid(category);
+    }
+
+    /* ============================================================
+       MODAL DE RECARGA INTERACTIVO
+       ============================================================ */
+    function openRechargeModal(gameId) {
+      activeGame = GAMES_DATA.find(g => g.id === gameId);
+      if (!activeGame) return;
+
+      document.getElementById('modalGameTitle').textContent = activeGame.title;
+      document.getElementById('modalGameCurrency').textContent = `Recarga oficial de ${activeGame.currencyName}`;
+      document.getElementById('modalGameIcon').innerHTML = `<i class="fas ${activeGame.icon}"></i>`;
+      document.getElementById('step1Title').textContent = `Ingresa tu ${activeGame.idType}`;
+      
+      // Construir inputs dinámicos
+      const inputContainer = document.getElementById('dynamicInputsContainer');
+      if (activeGame.reqFields.length === 2) {
+        inputContainer.className = "input-group-row two-cols";
+      } else {
+        inputContainer.className = "input-group-row";
+      }
+
+      inputContainer.innerHTML = activeGame.reqFields.map(f => {
+        if (f.type === "select") {
+          return `
+            <div class="form-input-wrap">
+              <label for="${f.name}">${f.label}</label>
+              <select id="${f.name}" class="form-input" required>
+                ${f.options.map(opt => `<option value="${opt}">${opt}</option>`).join('')}
+              </select>
+            </div>
+          `;
+        }
+        return `
+          <div class="form-input-wrap">
+            <label for="${f.name}">${f.label}</label>
+            <input type="text" id="${f.name}" class="form-input" placeholder="${f.placeholder}" required autocomplete="off">
+          </div>
+        `;
+      }).join('');
+
+      // Texto de ayuda
+      document.getElementById('helperBox').innerHTML = `
+        <i class="fas fa-info-circle" style="color: var(--cyan-neon);"></i>
+        <strong>¿Cómo encontrar tu ID?:</strong> ${activeGame.guide}
+      `;
+      document.getElementById('helperBox').style.display = 'none';
+
+      // Renderizar paquetes
+      renderPackages(activeGame);
+
+      // Mostrar modal
+      document.getElementById('voucherCard').style.display = 'none';
+      document.getElementById('rechargeForm').style.display = 'block';
+      document.getElementById('rechargeModal').classList.add('active');
+    }
+
+    function renderPackages(game) {
+      const container = document.getElementById('packagesGrid');
+      selectedPackage = game.packages[0];
+
+      container.innerHTML = game.packages.map((pkg, idx) => `
+        <div class="package-card ${idx === 0 ? 'active' : ''}" onclick="selectPackage(${idx}, this)">
+          ${pkg.tag ? `<span class="pkg-tag">${pkg.tag}</span>` : ''}
+          <div class="pkg-amount">${pkg.amount}</div>
+          <div class="pkg-currency-type">${game.currencyName.split(' ')[0]}</div>
+          <div class="pkg-price">${formatMoney(pkg.priceUSD)}</div>
+        </div>
+      `).join('');
+
+      document.getElementById('modalTotalPrice').textContent = formatMoney(selectedPackage.priceUSD);
+    }
+
+    function selectPackage(idx, card) {
+      document.querySelectorAll('.package-card').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+      selectedPackage = activeGame.packages[idx];
+      document.getElementById('modalTotalPrice').textContent = formatMoney(selectedPackage.priceUSD);
+    }
+
+    function selectPayment(el, method) {
+      document.querySelectorAll('.payment-option').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      selectedPaymentMethod = method;
+    }
+
+    function toggleHelpGuide() {
+      const box = document.getElementById('helperBox');
+      box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
+    }
+
+    function processRecharge(e) {
+      e.preventDefault();
+      const btn = document.getElementById('btnSubmitRecarga');
+      btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>¡Enviando a toda velocidad...!</span>`;
+      btn.disabled = true;
+
+      // Sonido de Suanfonson en la confirmación
+      playSuanfonsonSound();
+
+      setTimeout(() => {
+        btn.innerHTML = `<i class="fas fa-plane-departure"></i> <span>¡Recargar en un Suanfonson! 🏎️💨</span>`;
+        btn.disabled = false;
+
+        // Extraer id de usuario
+        const uidVal = document.getElementById('uid') ? document.getElementById('uid').value : (document.getElementById('riotId') ? document.getElementById('riotId').value : (document.getElementById('tag') ? document.getElementById('tag').value : "Cuenta"));
+        const zoneVal = document.getElementById('zone') ? ` (Zona ${document.getElementById('zone').value})` : '';
+
+        // Llenar voucher
+        document.getElementById('vchGame').textContent = activeGame.title;
+        document.getElementById('vchAccount').textContent = `${uidVal}${zoneVal}`;
+        document.getElementById('vchCurrency').textContent = selectedPackage.amount;
+        document.getElementById('vchPrice').textContent = `${formatMoney(selectedPackage.priceUSD)} (${selectedPaymentMethod})`;
+
+        document.getElementById('rechargeForm').style.display = 'none';
+        document.getElementById('voucherCard').style.display = 'block';
+      }, 1000);
+    }
+
+    function resetAndCloseModal() {
+      closeRechargeModal();
+    }
+
+    function closeRechargeModal() {
+      document.getElementById('rechargeModal').classList.remove('active');
+    }
+
+    function closeModalOnBg(e) {
+      if (e.target.id === 'rechargeModal') {
+        closeRechargeModal();
+      }
+    }
+
+    /* ============================================================
+       SIMULADOR ACÚSTICO DEL SUANFONSON (Web Audio API F1 Engine)
+       ============================================================ */
+    function playSuanfonsonSound() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        
+        // Oscilador de motor Fórmula 1 acelerando a fondo "Suaaan-fon-sooon"
+        const osc = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+
+        osc.type = 'sawtooth';
+        
+        // Simular el pitch de un motor F1 pasando en la recta a 300km/h con efecto Doppler
+        const now = audioCtx.currentTime;
+        osc.frequency.setValueAtTime(120, now);
+        osc.frequency.exponentialRampToValueAtTime(750, now + 0.35); // Suaaan
+        osc.frequency.exponentialRampToValueAtTime(320, now + 0.6);  // fon
+        osc.frequency.exponentialRampToValueAtTime(140, now + 1.1);  // soon
+
+        gainNode.gain.setValueAtTime(0.01, now);
+        gainNode.gain.linearRampToValueAtTime(0.3, now + 0.35);
+        gainNode.gain.exponentialRampToValueAtTime(0.001, now + 1.2);
+
+        osc.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+
+        osc.start(now);
+        osc.stop(now + 1.2);
+      } catch (err) {
+        console.log("Audio no soportado o bloqueado por el navegador");
+      }
+    }
+
+    // Inicialización
+    window.addEventListener('DOMContentLoaded', () => {
+      renderGamesGrid();
+    });
+  </script>
+</body>
+</html>
