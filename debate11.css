@@ -1,0 +1,41 @@
+form-container{
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #dcdcdc;
+  font-family: Arial, Helvetica, sans-serif
+}
+form-group{
+  margin-bottom: 15px;
+}
+label{
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px;
+  border: 1px solid #bbb;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus{
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+button[type="submit"]{
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    margin: 0%;
+}
+div{
+    background-color: pink;
+}
+h1{
+    color: blue;
+
+}
+h2{
+    background-color: aqua;
+}
+h3{background-color: yellow;
+}
+h4{
+    background-color: brown;
+}

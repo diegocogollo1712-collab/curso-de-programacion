@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+  font-family: Georgia, serif;
+  background-color: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
+}
+header, main, footer{
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+header{
+  background-color: #dd7777;
+  padding: 25px 30px;
+  border-bottom: 2px solid #eaeaea;
+}
+main{
+  background-color: #479f94;
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+footer{
+  background-color: #475767;
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+  font-size: 13px;
+}

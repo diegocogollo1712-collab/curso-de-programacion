@@ -1,0 +1,28 @@
+body{
+  font-family: Arial, Helvetica, sans-serif
+  margin 20px;
+}
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+  border: 1px solid #7c0505;
+}
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.sidebar{
+  float: left;
+  width: 28%;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #056e28;
+}
+.content{
+  float: right;
+  width: 72%;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #474a0341;
+}

@@ -1,0 +1,32 @@
+.btn-container{
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif
+}
+.btn{
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+.btn-primario{
+  background-color: #62031c;
+  color: #ffffff;
+}
+
+.btn-secundario{
+  background-color: #17a2b8;
+  color: #ffffff;
+}
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.btn:active{
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

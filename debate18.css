@@ -1,0 +1,32 @@
+.accordion{
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  border: 1px solid #c41010;
+}
+.item{
+  border-bottom: 1px solid #24026d;
+}
+.item input[type="checkbox"] {
+  display: none;
+}
+.item label{
+  display: block;
+  padding: 14px 18px;
+  background-color: #abe207;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+}
+
+.item label:hover{
+  background-color: #c56207;
+}
+.content{
+  display: none;
+  padding: 15px 18px;
+  background-color: #8e0b5e;
+}
+.item input[type="checkbox"]:checked + label + .content{
+  display: block;
+}
