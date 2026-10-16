@@ -1,11 +1,1153 @@
-<!-- Alias a ola.html -->
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta http-equiv="refresh" content="0; url=ola.html">
-  <title>iPhone 18 Pro Max</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academia Danzas Erick - Cuna de ritmo, técnica y pasión nacionalista venezolana. Ensayos de lunes a viernes de 4:00 PM a 8:00 PM para todas las categorías. Inscripciones abiertas.">
+  <meta name="keywords" content="Danzas Erick, Danza Nacionalista Venezolana, Joropo, Academia de Baile, Ensayos Danza, Folklore Venezolano">
+  <meta property="og:title" content="Danzas Erick - Academia de Danza Nacionalista">
+  <meta property="og:description" content="Formación dancística tradicional y estilizada en Venezuela. Ensayos de lunes a viernes de 4 a 8 PM.">
+  <title>Danzas Erick | Academia de Danza Nacionalista Venezolana</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for UI elements -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p>Redirigiendo a <a href="ola.html">iPhone 18 Pro Max Showroom</a>...</p>
+
+  <!-- Ambient Glow Background -->
+  <div class="ambient-backdrop">
+    <div class="ambient-glow glow-gold"></div>
+    <div class="ambient-glow glow-blue"></div>
+    <div class="ambient-glow glow-red"></div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-content">
+      <a href="#hero" class="brand-identity" id="brandLogoLink">
+        <div class="brand-icon-wrapper">
+          <img src="assets/silueta_nacionalista.jpg" alt="Icono Danzas Erick" class="brand-avatar-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">DANZAS ERICK</span>
+          <span class="brand-sub">DANZA NACIONALISTA VENEZOLANA</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-home"></i> Inicio</a></li>
+          <li><a href="#horarios" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Ensayos (4 a 8 PM)</a></li>
+          <li><a href="#categorias" class="nav-link"><i class="fa-solid fa-users"></i> Categorías</a></li>
+          <li><a href="#mensualidad" class="nav-link"><i class="fa-solid fa-credit-card"></i> Mensualidad</a></li>
+          <li><a href="#video-seccion" class="nav-link"><i class="fa-solid fa-clapperboard"></i> Danza en Escena</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button type="button" class="btn btn-sm btn-outline" id="btnAdminPanel" title="Ver Alumnos Registrados">
+          <i class="fa-solid fa-clipboard-user"></i> <span class="desktop-only">Alumnos</span>
+        </button>
+        <a href="#inscripcion" class="btn btn-sm btn-gold" id="btnHeaderInscripcion">
+          <i class="fa-solid fa-feather-pointed"></i> Inscribirse
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Notification Bar for Live Rehearsals Status -->
+  <div class="rehearsal-live-bar" id="liveRehearsalBar">
+    <div class="container live-bar-inner">
+      <div class="live-status-pill">
+        <span class="pulse-dot"></span>
+        <span class="live-label" id="liveScheduleText">Cargando estado de ensayos...</span>
+      </div>
+      <div class="live-bar-notice">
+        <i class="fa-solid fa-clock"></i> Ensayos activos de <strong>Lunes a Viernes de 4:00 PM a 8:00 PM</strong>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION / PORTADA -->
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-info animate-fade-in-left">
+            <div class="hero-badge">
+              <span class="badge-tricolor-strip"></span>
+              <span class="badge-text"><i class="fa-solid fa-award"></i> Academia Oficial de Danza Nacionalista</span>
+            </div>
+            <h1 class="hero-headline">
+              DANZAS <span class="gold-gradient-text">ERICK</span>
+            </h1>
+            <p class="hero-tagline">
+              El alma de Venezuela en cada paso, zapateo y faldeo. Formamos bailarines de excelencia en Danza Nacionalista, Joropo, Tradición y Expresión Escénica.
+            </p>
+
+            <div class="hero-features-list">
+              <div class="hero-feature-item">
+                <i class="fa-solid fa-calendar-check feature-icon"></i>
+                <div>
+                  <strong>Lunes a Viernes</strong>
+                  <span>De 4:00 PM a 8:00 PM</span>
+                </div>
+              </div>
+              <div class="hero-feature-item">
+                <i class="fa-solid fa-person-walking-arrow-right feature-icon"></i>
+                <div>
+                  <strong>5 Categorías</strong>
+                  <span>Desde Semillitas hasta Adultos</span>
+                </div>
+              </div>
+              <div class="hero-feature-item">
+                <i class="fa-solid fa-certificate feature-icon"></i>
+                <div>
+                  <strong>Proyección Escénica</strong>
+                  <span>Galas, festivales y repertorio</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-actions-group">
+              <a href="#inscripcion" class="btn btn-lg btn-gold hero-cta-btn" id="heroCtaInscribirse">
+                <i class="fa-solid fa-file-signature"></i> Inscríbete Ahora
+              </a>
+              <a href="#video-seccion" class="btn btn-lg btn-glass" id="heroCtaVideo">
+                <i class="fa-solid fa-circle-play"></i> Ver Presentación
+              </a>
+              <a href="#horarios" class="btn btn-lg btn-outline-light" id="heroCtaHorarios">
+                <i class="fa-solid fa-clock"></i> Horarios
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-box">
+                <span class="stat-number">+15</span>
+                <span class="stat-desc">Años de Trayectoria</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">4h</span>
+                <span class="stat-desc">Diarias de Ensayo</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">100%</span>
+                <span class="stat-desc">Pasión Venezolana</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Icon / Silhouette Showcase -->
+          <div class="hero-visual animate-fade-in-right">
+            <div class="silhouette-medallion-container">
+              <div class="medallion-halo"></div>
+              <div class="medallion-ring ring-1"></div>
+              <div class="medallion-ring ring-2"></div>
+              
+              <!-- The Silhouette Icon Frame -->
+              <div class="silhouette-card" id="silhouetteCard" title="Pareja de Danza Nacionalista - Icono Oficial">
+                <div class="silhouette-img-wrapper">
+                  <img src="assets/silueta_nacionalista.jpg" alt="Pareja de baile nacionalista en silueta negra con resplandor dorado" class="silhouette-main-img" id="heroSilhouetteImg">
+                  <div class="silhouette-glass-reflection"></div>
+                </div>
+                <div class="silhouette-badge">
+                  <i class="fa-solid fa-sparkles"></i> Danzas Erick • Emblema Oficial
+                </div>
+              </div>
+
+              <!-- Floating Highlights around the Icon -->
+              <div class="floating-badge badge-top-left">
+                <i class="fa-solid fa-drum text-gold"></i>
+                <div>
+                  <small>Ritmos</small>
+                  <strong>Joropo & Tambor</strong>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-right">
+                <i class="fa-solid fa-venus-mars text-gold"></i>
+                <div>
+                  <small>Ensayos</small>
+                  <strong>Lun a Vie 4-8 PM</strong>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="hero-bottom-curve">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0C240 80 480 120 720 120C960 120 1200 80 1440 0V120H0V0Z" fill="var(--bg-secondary)"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- HORARIOS DE ENSAYOS SECTION -->
+    <section class="section-container bg-secondary" id="horarios">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-pre-title"><i class="fa-solid fa-clock"></i> Cronograma de Formación</span>
+          <h2 class="section-title">Días y Horarios de <span class="gold-gradient-text">Ensayos</span></h2>
+          <p class="section-subtitle">
+            Nuestros ensayos se desarrollan de <strong>Lunes a Viernes ininterrumpidamente de 4:00 PM a 8:00 PM</strong>, distribuidos por bloques especializados según la categoría y nivel técnico de cada bailarín.
+          </p>
+        </div>
+
+        <!-- Day Selector Tabs -->
+        <div class="schedule-days-nav" id="scheduleDaysNav">
+          <button class="day-tab-btn active" data-day="todos">
+            <i class="fa-solid fa-calendar-week"></i> Semana Completa (Lun - Vie)
+          </button>
+          <button class="day-tab-btn" data-day="lunes">Lunes</button>
+          <button class="day-tab-btn" data-day="martes">Martes</button>
+          <button class="day-tab-btn" data-day="miercoles">Miércoles</button>
+          <button class="day-tab-btn" data-day="jueves">Jueves</button>
+          <button class="day-tab-btn" data-day="viernes">Viernes</button>
+        </div>
+
+        <!-- Schedule Grid Cards -->
+        <div class="schedule-grid" id="scheduleCardsGrid">
+          
+          <!-- Bloque 1: 4:00 PM - 5:00 PM -->
+          <div class="schedule-card" data-category="semillitas">
+            <div class="schedule-time-badge">
+              <i class="fa-regular fa-clock"></i> 4:00 PM - 5:00 PM
+            </div>
+            <div class="schedule-card-body">
+              <div class="category-pill pill-semillita">
+                <i class="fa-solid fa-seedling"></i> Semillitas (4 a 6 años)
+              </div>
+              <h3 class="schedule-card-title">Iniciación al Ritmo y Psicomotricidad</h3>
+              <p class="schedule-desc">
+                Desarrollo del oído musical, expresión corporal lúdica, coordinación rítmica con maracas y primeros pasos básicos del joropo nacionalista.
+              </p>
+              <ul class="schedule-detail-list">
+                <li><i class="fa-solid fa-check text-gold"></i> Días: Lunes a Viernes</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Profesor: Especialista en Danza Infantil</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Sala 1: Salón de Espejos y Piso de Madera</li>
+              </ul>
+            </div>
+            <div class="schedule-card-footer">
+              <span class="status-indicator-badge live-tag-semillitas">Disponible</span>
+              <a href="#inscripcion" class="btn btn-xs btn-outline-gold select-category-btn" data-category="Semillitas (4 a 6 años)">Inscribir en esta</a>
+            </div>
+          </div>
+
+          <!-- Bloque 2: 5:00 PM - 6:00 PM -->
+          <div class="schedule-card" data-category="infantil">
+            <div class="schedule-time-badge">
+              <i class="fa-regular fa-clock"></i> 5:00 PM - 6:00 PM
+            </div>
+            <div class="schedule-card-body">
+              <div class="category-pill pill-infantil">
+                <i class="fa-solid fa-child"></i> Infantil (7 a 11 años)
+              </div>
+              <h3 class="schedule-card-title">Técnica de Faldeo y Zapateo Base</h3>
+              <p class="schedule-desc">
+                Perfeccionamiento de la postura escénica, dominio del faldeo tricolor y tradicional, zapateos de joropo llanero, giros y compases de golpe larense.
+              </p>
+              <ul class="schedule-detail-list">
+                <li><i class="fa-solid fa-check text-gold"></i> Días: Lunes a Viernes</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Trabajo en equipo y figuras espaciales</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Participación en festivales regionales</li>
+              </ul>
+            </div>
+            <div class="schedule-card-footer">
+              <span class="status-indicator-badge live-tag-infantil">Disponible</span>
+              <a href="#inscripcion" class="btn btn-xs btn-outline-gold select-category-btn" data-category="Infantil (7 a 11 años)">Inscribir en esta</a>
+            </div>
+          </div>
+
+          <!-- Bloque 3: 6:00 PM - 7:00 PM -->
+          <div class="schedule-card highlight-card" data-category="juvenil">
+            <div class="popular-ribbon"><i class="fa-solid fa-star"></i> Muy Solicitado</div>
+            <div class="schedule-time-badge">
+              <i class="fa-regular fa-clock"></i> 6:00 PM - 7:00 PM
+            </div>
+            <div class="schedule-card-body">
+              <div class="category-pill pill-juvenil">
+                <i class="fa-solid fa-user-graduate"></i> Juvenil (12 a 17 años)
+              </div>
+              <h3 class="schedule-card-title">Danza Nacionalista Estilizada y Fuerza</h3>
+              <p class="schedule-desc">
+                Coreografías de alta exigencia física: Joropo recio, polirritmia con tambores de las costas venezolanas, calipso de El Callao y fusión contemporánea.
+              </p>
+              <ul class="schedule-detail-list">
+                <li><i class="fa-solid fa-check text-gold"></i> Días: Lunes a Viernes</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Técnica de giros, cargadas y sincronía</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Formación para el elenco de proyección</li>
+              </ul>
+            </div>
+            <div class="schedule-card-footer">
+              <span class="status-indicator-badge live-tag-juvenil">Disponible</span>
+              <a href="#inscripcion" class="btn btn-xs btn-gold select-category-btn" data-category="Juvenil (12 a 17 años)">Inscribir en esta</a>
+            </div>
+          </div>
+
+          <!-- Bloque 4: 7:00 PM - 8:00 PM -->
+          <div class="schedule-card" data-category="adultos">
+            <div class="schedule-time-badge">
+              <i class="fa-regular fa-clock"></i> 7:00 PM - 8:00 PM
+            </div>
+            <div class="schedule-card-body">
+              <div class="category-pill pill-adultos">
+                <i class="fa-solid fa-crown"></i> Adultos & Elenco Principal (18+ años)
+              </div>
+              <h3 class="schedule-card-title">Montajes de Gala y Proyección Escénica</h3>
+              <p class="schedule-desc">
+                Elenco estable de Danzas Erick y grupo de adultos formativo. Preparación de grandes montajes teatrales, homenajes a Yolanda Moreno y giras dancísticas.
+              </p>
+              <ul class="schedule-detail-list">
+                <li><i class="fa-solid fa-check text-gold"></i> Días: Lunes a Viernes</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Repertorio magistral y solistas</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Entrenamiento de resistencia y virtuosismo</li>
+              </ul>
+            </div>
+            <div class="schedule-card-footer">
+              <span class="status-indicator-badge live-tag-adultos">Disponible</span>
+              <a href="#inscripcion" class="btn btn-xs btn-outline-gold select-category-btn" data-category="Adultos & Elenco Principal (18+ años)">Inscribir en esta</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Weekly Summary Banner -->
+        <div class="schedule-banner-box">
+          <div class="banner-icon"><i class="fa-solid fa-bell-concierge"></i></div>
+          <div class="banner-text">
+            <h4>¿No sabes a qué horario corresponde tu nivel?</h4>
+            <p>Los aspirantes pueden asistir a una <strong>clase diagnóstica de prueba gratuita</strong> entre 4:00 PM y 8:00 PM de lunes a viernes para ser ubicados en el grupo idóneo.</p>
+          </div>
+          <a href="#inscripcion" class="btn btn-sm btn-outline-light">Solicitar Evaluación</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIAS SECTION -->
+    <section class="section-container" id="categorias">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-pre-title"><i class="fa-solid fa-masks-theater"></i> Formación Integral</span>
+          <h2 class="section-title">Nuestras <span class="gold-gradient-text">Categorías</span> de Danza</h2>
+          <p class="section-subtitle">
+            Cada grupo cuenta con un programa pedagógico diseñado para cultivar la disciplina, la técnica y el amor incondicional por las raíces culturales de Venezuela.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          
+          <div class="category-card">
+            <div class="category-icon-box">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h3>Semillitas de Venezuela</h3>
+            <span class="cat-age">Edades: 4 a 6 años</span>
+            <p>Estimulación temprana a través del movimiento tradicional, canciones infantiles venezolanas y el respeto por el vestuario y los instrumentos.</p>
+            <div class="cat-schedule-tag"><i class="fa-solid fa-clock"></i> 4:00 PM - 5:00 PM (Lun-Vie)</div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon-box">
+              <i class="fa-solid fa-shapes"></i>
+            </div>
+            <h3>Infantil Tradicional</h3>
+            <span class="cat-age">Edades: 7 a 11 años</span>
+            <p>Aprendizaje de golpes llaneros, tambores de San Juan, vals venezolano, danzas de oriente y la elegancia del faldeo sincronizado.</p>
+            <div class="cat-schedule-tag"><i class="fa-solid fa-clock"></i> 5:00 PM - 6:00 PM (Lun-Vie)</div>
+          </div>
+
+          <div class="category-card highlight-border">
+            <div class="category-icon-box gold-glow">
+              <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+            <h3>Juvenil Nacionalista</h3>
+            <span class="cat-age">Edades: 12 a 17 años</span>
+            <p>Fuerza, velocidad de zapateo, dominio de acrobacias coreográficas, soltura escénica y montajes de danzas de las tres regiones de Venezuela.</p>
+            <div class="cat-schedule-tag"><i class="fa-solid fa-clock"></i> 6:00 PM - 7:00 PM (Lun-Vie)</div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon-box">
+              <i class="fa-solid fa-theater-masks"></i>
+            </div>
+            <h3>Elenco Estable & Adultos</h3>
+            <span class="cat-age">Edades: 18 años en adelante</span>
+            <p>Máxima expresión artística. Bailarines preparados para festivales de envergadura nacional, galas televisivas y representaciones de Danzas Erick.</p>
+            <div class="cat-schedule-tag"><i class="fa-solid fa-clock"></i> 7:00 PM - 8:00 PM (Lun-Vie)</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MENSUALIDAD Y PLANES DE PAGO SECTION -->
+    <section class="section-container bg-secondary" id="mensualidad">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-pre-title"><i class="fa-solid fa-wallet"></i> Inversión y Matrícula</span>
+          <h2 class="section-title">Planes de <span class="gold-gradient-text">Inscripción y Mensualidad</span></h2>
+          <p class="section-subtitle">
+            Tarifas claras, transparentes y accesibles para garantizar la formación artística de primer nivel para niños, jóvenes y adultos.
+          </p>
+        </div>
+
+        <!-- Currency Switcher Toggle -->
+        <div class="currency-toggle-wrapper">
+          <span class="curr-label">Moneda de visualización:</span>
+          <div class="currency-switch-box">
+            <button class="curr-btn active" id="currUsdBtn" data-currency="USD">USD ($)</button>
+            <button class="curr-btn" id="currBsBtn" data-currency="VES">Bolívares (Bs. BCV)</button>
+          </div>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div class="pricing-grid">
+
+          <!-- Plan Semillita / Infantil -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="plan-name">Plan Semillita & Infantil</h3>
+              <p class="plan-subtitle">Para edades de 4 a 11 años</p>
+              <div class="price-display">
+                <span class="currency-sym" data-curr-sym="$">$</span>
+                <span class="price-val" data-usd="20" data-bs="1100">20</span>
+                <span class="price-period">/ mensual</span>
+              </div>
+              <div class="matricula-tag">
+                <i class="fa-solid fa-id-card"></i> Inscripción única: <strong class="insc-val" data-usd="15" data-bs="825">$15</strong>
+              </div>
+            </div>
+            <div class="pricing-body">
+              <ul class="pricing-features">
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Ensayos de Lunes a Viernes (1h diaria)</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Carnet digital estudiantil</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Acceso a eventos y muestras internas</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Asesoría de faldeo y zapateo básico</li>
+                <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Vestuario de gala incluido</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="#inscripcion" class="btn btn-block btn-outline-gold select-plan-btn" data-plan="Plan Semillita & Infantil">Seleccionar Plan</a>
+            </div>
+          </div>
+
+          <!-- Plan Juvenil Proyección -->
+          <div class="pricing-card featured-pricing-card">
+            <div class="featured-badge"><i class="fa-solid fa-fire"></i> Recomendado</div>
+            <div class="pricing-header">
+              <h3 class="plan-name">Plan Juvenil Proyección</h3>
+              <p class="plan-subtitle">Para edades de 12 a 17 años</p>
+              <div class="price-display">
+                <span class="currency-sym" data-curr-sym="$">$</span>
+                <span class="price-val" data-usd="25" data-bs="1375">25</span>
+                <span class="price-period">/ mensual</span>
+              </div>
+              <div class="matricula-tag">
+                <i class="fa-solid fa-id-card"></i> Inscripción única: <strong class="insc-val" data-usd="20" data-bs="1100">$20</strong>
+              </div>
+            </div>
+            <div class="pricing-body">
+              <ul class="pricing-features">
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Ensayos de Lunes a Viernes (6 a 7 PM)</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Talleres especiales de zapateo recio</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Clases magistrales de polirritmia y tambor</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Carnet digital y seguro de sala</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Participación en festivales y competencias</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="#inscripcion" class="btn btn-block btn-gold select-plan-btn" data-plan="Plan Juvenil Proyección">Seleccionar Plan</a>
+            </div>
+          </div>
+
+          <!-- Plan Elenco Principal & Adultos -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="plan-name">Plan Elenco Principal & Adultos</h3>
+              <p class="plan-subtitle">18+ años y bailarines avanzados</p>
+              <div class="price-display">
+                <span class="currency-sym" data-curr-sym="$">$</span>
+                <span class="price-val" data-usd="30" data-bs="1650">30</span>
+                <span class="price-period">/ mensual</span>
+              </div>
+              <div class="matricula-tag">
+                <i class="fa-solid fa-id-card"></i> Inscripción única: <strong class="insc-val" data-usd="25" data-bs="1375">$25</strong>
+              </div>
+            </div>
+            <div class="pricing-body">
+              <ul class="pricing-features">
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Ensayos de Lunes a Viernes (7 a 8 PM)</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Montajes oficiales de teatro y repertorio</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Ensayos de solistas y dúos escénicos</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Certificado de formación artística anual</li>
+                <li><i class="fa-solid fa-circle-check text-gold"></i> Descuentos en indumentaria oficial</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="#inscripcion" class="btn btn-block btn-outline-gold select-plan-btn" data-plan="Plan Elenco Principal & Adultos">Seleccionar Plan</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Datos de Pago Bancario de la Academia -->
+        <div class="payment-methods-box">
+          <div class="payment-methods-header">
+            <h3><i class="fa-solid fa-money-bill-transfer text-gold"></i> Canales de Pago Autorizados - Danzas Erick</h3>
+            <p>Puedes cancelar la mensualidad y tu inscripción a través de cualquiera de los siguientes medios oficiales:</p>
+          </div>
+
+          <div class="payment-channels-grid">
+            
+            <!-- Pago Móvil -->
+            <div class="payment-card">
+              <div class="pay-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <div class="pay-details">
+                <h4>Pago Móvil</h4>
+                <p><strong>Banco:</strong> Banesco (0134) / Bco. Venezuela (0102)</p>
+                <p><strong>Teléfono:</strong> 0412-5551234</p>
+                <p><strong>C.I. / RIF:</strong> V-24.891.432</p>
+                <button class="btn-copy-info" data-copy="0134 - 04125551234 - V24891432"><i class="fa-regular fa-copy"></i> Copiar Datos</button>
+              </div>
+            </div>
+
+            <!-- Transferencias Bancarias -->
+            <div class="payment-card">
+              <div class="pay-icon"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="pay-details">
+                <h4>Transferencias Bancarias</h4>
+                <p><strong>Banco:</strong> Banesco Banco Universal</p>
+                <p><strong>Cuenta:</strong> 0134-0012-34-1234567890</p>
+                <p><strong>Titular:</strong> Academia Danzas Erick C.A.</p>
+                <button class="btn-copy-info" data-copy="01340012341234567890"><i class="fa-regular fa-copy"></i> Copiar Cuenta</button>
+              </div>
+            </div>
+
+            <!-- Divisas / Zelle / Efectivo -->
+            <div class="payment-card">
+              <div class="pay-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+              <div class="pay-details">
+                <h4>Divisas en Efectivo & Zelle</h4>
+                <p><strong>Efectivo:</strong> Pago directo en la sede (Lunes a Viernes 4-8 PM)</p>
+                <p><strong>Zelle:</strong> pagos@danzas-erick.com</p>
+                <p><strong>Binance USDT:</strong> Pay ID disponible a solicitud</p>
+                <button class="btn-copy-info" data-copy="pagos@danzas-erick.com"><i class="fa-regular fa-copy"></i> Copiar Correo</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Mensualidad Calculator / Report Assistant -->
+          <div class="payment-calculator-strip">
+            <div class="calc-text">
+              <i class="fa-solid fa-calculator text-gold"></i>
+              <span>¿Tienes dudas con tu pago o quieres reportar una mensualidad?</span>
+            </div>
+            <a href="https://wa.me/584125551234?text=Hola%20Danzas%20Erick,%20deseo%20consultar%20mi%20mensualidad%20o%20reportar%20un%20comprobante." target="_blank" class="btn btn-sm btn-outline-light">
+              <i class="fa-brands fa-whatsapp text-whatsapp"></i> Reportar por WhatsApp
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MINI VIDEO Y GALERIA DE BAILES NACIONALISTAS VENEZOLANOS -->
+    <section class="section-container" id="video-seccion">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-pre-title"><i class="fa-solid fa-film"></i> La Magia en Escena</span>
+          <h2 class="section-title">Bailes Nacionalistas <span class="gold-gradient-text">Venezolanos</span></h2>
+          <p class="section-subtitle">
+            Disfruta de la majestuosidad de la Danza Nacionalista: el vuelo de las faldas tricolores, el compás vibrante del arpa, cuatro y maracas, y la pasión de nuestros bailarines.
+          </p>
+        </div>
+
+        <div class="video-showcase-container">
+          
+          <!-- Main Player Box -->
+          <div class="main-player-wrapper">
+            <div class="video-frame-outer">
+              
+              <!-- Video Frame (Responsive 16:9) -->
+              <div class="video-responsive-box" id="videoBoxWrapper">
+                <iframe 
+                  id="mainVideoFrame" 
+                  src="https://www.youtube-nocookie.com/embed/n9qbIFD7l2w?rel=0&autoplay=0&enablejsapi=1" 
+                  title="Danza Nacionalista Venezolana" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+                
+                <!-- Video Ambient Glow Effect Behind Frame -->
+                <div class="video-ambient-glow"></div>
+              </div>
+
+              <!-- Video Controls Bar / Info -->
+              <div class="video-meta-bar">
+                <div class="video-active-title">
+                  <i class="fa-solid fa-clapperboard text-gold"></i>
+                  <span id="currentVideoTitle">Muestra Magistral: Danza Nacionalista Venezolana & Joropo Recio</span>
+                </div>
+                <div class="video-actions">
+                  <button type="button" class="btn-video-action" id="btnRestartVideo" title="Reiniciar Video">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                  </button>
+                  <button type="button" class="btn-video-action" id="btnFullscreenVideo" title="Pantalla Completa">
+                    <i class="fa-solid fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Video Playlist / Selector Sidebar -->
+          <div class="video-playlist-sidebar">
+            <h4 class="playlist-heading"><i class="fa-solid fa-list-check"></i> Repertorio de Muestra</h4>
+            <div class="playlist-items" id="videoPlaylistItems">
+
+              <!-- Video Item 1 -->
+              <div class="playlist-card active" data-videoid="n9qbIFD7l2w" data-title="Danza Nacionalista Venezolana & Joropo Recio" data-desc="Elegancia, zapateo y el vuelo de faldas tricolor.">
+                <div class="playlist-thumb">
+                  <img src="assets/danza_teatro.jpg" alt="Miniatura Danza Nacionalista" class="thumb-img">
+                  <div class="thumb-play-overlay"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="playlist-info">
+                  <span class="playlist-category">Danza Tradicional</span>
+                  <h5>Joropo Recio & Faldeo Nacionalista</h5>
+                  <small>Danza central de formación en Danzas Erick</small>
+                </div>
+              </div>
+
+              <!-- Video Item 2 -->
+              <div class="playlist-card" data-videoid="b4pD3yL5U28" data-title="Tambores de Barlovento y Costa Venezolana" data-desc="Ritmo afrovenezolano, sincronía de caderas y polirritmia.">
+                <div class="playlist-thumb">
+                  <div class="thumb-pattern-bg thumb-tambor">
+                    <i class="fa-solid fa-drum text-gold"></i>
+                  </div>
+                  <div class="thumb-play-overlay"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="playlist-info">
+                  <span class="playlist-category">Ritmos de Costa</span>
+                  <h5>Tambores de San Juan & Barlovento</h5>
+                  <small>Fuerza, percusión y raíces afrovenezolanas</small>
+                </div>
+              </div>
+
+              <!-- Video Item 3 -->
+              <div class="playlist-card" data-videoid="GqYqjW8oFv4" data-title="Danza de las Cintas y Tradición Oriental" data-desc="Tejido de cintas, joropo con estribillo y calipso de El Callao.">
+                <div class="playlist-thumb">
+                  <div class="thumb-pattern-bg thumb-oriente">
+                    <i class="fa-solid fa-ribbon text-gold"></i>
+                  </div>
+                  <div class="thumb-play-overlay"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="playlist-info">
+                  <span class="playlist-category">Oriente & Guayana</span>
+                  <h5>El Sebucán y Calipso Tradicional</h5>
+                  <small>Colorido, compás festivo y tradición patria</small>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Mini Tip Box -->
+            <div class="playlist-tip">
+              <i class="fa-solid fa-lightbulb text-gold"></i>
+              <span>Todos estos repertorios forman parte del pensum formativo que se imparte de <strong>lunes a viernes de 4 a 8 pm</strong>.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Photographic Highlights Row -->
+        <div class="theatrical-banner-strip">
+          <div class="theatrical-img-box">
+            <img src="assets/danza_teatro.jpg" alt="Presentación escénica Danzas Erick" class="theatrical-full-img">
+            <div class="theatrical-caption">
+              <div class="caption-content">
+                <span class="caption-tag">Escenario Teatral</span>
+                <h4>Nuestros bailarines brillan bajo las luces de los mejores teatros</h4>
+                <p>En Danzas Erick el ensayo diario de 4:00 PM a 8:00 PM se transforma en aplausos, orgullo nacional y proyección artística profesional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORMULARIO DE INSCRIPCION SECTION -->
+    <section class="section-container bg-secondary" id="inscripcion">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-pre-title"><i class="fa-solid fa-pen-nib"></i> Admisión Ciclo 2026</span>
+          <h2 class="section-title">Formulario Oficial de <span class="gold-gradient-text">Inscripción</span></h2>
+          <p class="section-subtitle">
+            Completa los datos del aspirante para reservar su cupo en el horario de ensayos de lunes a viernes (4:00 PM a 8:00 PM). Al finalizar obtendrás tu <strong>Ficha de Inscripción Digital</strong> y podrás enviarla directamente por WhatsApp.
+          </p>
+        </div>
+
+        <div class="enrollment-wrapper">
+          <div class="enrollment-card">
+            
+            <form id="enrollmentForm" class="enrollment-form" novalidate>
+              
+              <!-- Step indicator -->
+              <div class="form-steps-header">
+                <div class="step-indicator active" id="stepIndicator1">
+                  <span class="step-num">1</span>
+                  <span class="step-label">Datos del Alumno</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="stepIndicator2">
+                  <span class="step-num">2</span>
+                  <span class="step-label">Categoría & Horario</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="stepIndicator3">
+                  <span class="step-num">3</span>
+                  <span class="step-label">Pago & Confirmación</span>
+                </div>
+              </div>
+
+              <!-- SECCIÓN 1: DATOS PERSONALES -->
+              <div class="form-section-block" id="blockStep1">
+                <h4 class="form-block-title"><i class="fa-solid fa-user-tag text-gold"></i> 1. Información del Alumno / Bailarín</h4>
+                
+                <div class="form-row grid-2">
+                  <div class="form-group">
+                    <label for="studentFullName" class="form-label">Nombres y Apellidos del Alumno <span class="required">*</span></label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-user input-icon"></i>
+                      <input type="text" id="studentFullName" name="studentFullName" class="form-control" placeholder="Ej: Valentina Sofía Mendoza" required>
+                    </div>
+                    <span class="error-msg" id="err-studentFullName"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="studentCedula" class="form-label">Cédula o Cédula Escolar <span class="required">*</span></label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-id-card input-icon"></i>
+                      <input type="text" id="studentCedula" name="studentCedula" class="form-control" placeholder="Ej: V-31.254.980" required>
+                    </div>
+                    <span class="error-msg" id="err-studentCedula"></span>
+                  </div>
+                </div>
+
+                <div class="form-row grid-3">
+                  <div class="form-group">
+                    <label for="studentBirthDate" class="form-label">Fecha de Nacimiento <span class="required">*</span></label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-cake-candles input-icon"></i>
+                      <input type="date" id="studentBirthDate" name="studentBirthDate" class="form-control" required>
+                    </div>
+                    <span class="error-msg" id="err-studentBirthDate"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="studentAge" class="form-label">Edad Cumplida <span class="required">*</span></label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-hashtag input-icon"></i>
+                      <input type="number" id="studentAge" name="studentAge" class="form-control" placeholder="Ej: 14" min="4" max="75" required>
+                    </div>
+                    <span class="error-msg" id="err-studentAge"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="studentGender" class="form-label">Género <span class="required">*</span></label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-venus-mars input-icon"></i>
+                      <select id="studentGender" name="studentGender" class="form-control" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Femenino">Femenino (Bailarina)</option>
+                        <option value="Masculino">Masculino (Bailarín)</option>
+                      </select>
+                    </div>
+                    <span class="error-msg" id="err-studentGender"></span>
+                  </div>
+                </div>
+
+                <div class="form-row grid-2">
+                  <div class="form-group">
+                    <label for="studentPhone" class="form-label">Teléfono / WhatsApp de Contacto <span class="required">*</span></label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-brands fa-whatsapp input-icon"></i>
+                      <input type="tel" id="studentPhone" name="studentPhone" class="form-control" placeholder="Ej: 0414-1234567" required>
+                    </div>
+                    <span class="error-msg" id="err-studentPhone"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="studentEmail" class="form-label">Correo Electrónico</label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-envelope input-icon"></i>
+                      <input type="email" id="studentEmail" name="studentEmail" class="form-control" placeholder="Ej: representante@correo.com">
+                    </div>
+                    <span class="error-msg" id="err-studentEmail"></span>
+                  </div>
+                </div>
+
+                <!-- Representante (si es menor) -->
+                <div class="guardian-box" id="guardianBox">
+                  <div class="guardian-header">
+                    <i class="fa-solid fa-hands-holding-child text-gold"></i>
+                    <span>Datos del Representante Legal (Requerido para menores de edad)</span>
+                  </div>
+                  <div class="form-row grid-2">
+                    <div class="form-group">
+                      <label for="guardianName" class="form-label">Nombre del Representante</label>
+                      <input type="text" id="guardianName" name="guardianName" class="form-control" placeholder="Ej: Carmen Gómez">
+                    </div>
+                    <div class="form-group">
+                      <label for="guardianPhone" class="form-label">Teléfono del Representante</label>
+                      <input type="tel" id="guardianPhone" name="guardianPhone" class="form-control" placeholder="Ej: 0424-9876543">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- SECCIÓN 2: CATEGORÍA Y HORARIO DE ENSAYOS -->
+              <div class="form-section-block" id="blockStep2">
+                <h4 class="form-block-title"><i class="fa-solid fa-clock text-gold"></i> 2. Categoría y Horario de Ensayos (Lunes a Viernes)</h4>
+
+                <div class="form-row grid-2">
+                  <div class="form-group">
+                    <label for="enrollCategory" class="form-label">Categoría a la que Aspira <span class="required">*</span></label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-users-viewfinder input-icon"></i>
+                      <select id="enrollCategory" name="enrollCategory" class="form-control" required>
+                        <option value="">-- Seleccione Categoría --</option>
+                        <option value="Semillitas (4 a 6 años)">Semillitas (4 a 6 años) • 4:00 PM a 5:00 PM</option>
+                        <option value="Infantil (7 a 11 años)">Infantil (7 a 11 años) • 5:00 PM a 6:00 PM</option>
+                        <option value="Juvenil (12 a 17 años)">Juvenil (12 a 17 años) • 6:00 PM a 7:00 PM</option>
+                        <option value="Adultos & Elenco Principal (18+ años)">Adultos & Elenco Principal (18+ años) • 7:00 PM a 8:00 PM</option>
+                      </select>
+                    </div>
+                    <span class="error-msg" id="err-enrollCategory"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="enrollExperience" class="form-label">Experiencia Previa en Danza</label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-shoe-prints input-icon"></i>
+                      <select id="enrollExperience" name="enrollExperience" class="form-control">
+                        <option value="Principiante (Sin experiencia)">Principiante (Desde cero)</option>
+                        <option value="Intermedio (Conocimientos básicos)">Intermedio (Ha bailado antes)</option>
+                        <option value="Avanzado (Bailarín con formación)">Avanzado (Bailarín experimentado)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Info pill showing rehearsal times confirmed -->
+                <div class="rehearsal-confirm-pill" id="rehearsalSummaryPill">
+                  <i class="fa-solid fa-calendar-check text-gold"></i>
+                  <div class="pill-text">
+                    <strong>Días de Ensayos Confirmados:</strong> Lunes a Viernes
+                    <div id="confirmedTimeSlot" class="text-gold">Selecciona tu categoría para ver tu horario exacto.</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="studentObservations" class="form-label">Condición Médica / Alergias u Observaciones</label>
+                  <textarea id="studentObservations" name="studentObservations" rows="2" class="form-control" placeholder="Indicar si posee alguna condición de salud, asma, lesión previa o requerimiento especial."></textarea>
+                </div>
+              </div>
+
+              <!-- SECCIÓN 3: PLAN DE MENSUALIDAD Y PAGO -->
+              <div class="form-section-block" id="blockStep3">
+                <h4 class="form-block-title"><i class="fa-solid fa-receipt text-gold"></i> 3. Plan de Matrícula y Método de Pago</h4>
+
+                <div class="form-row grid-2">
+                  <div class="form-group">
+                    <label for="enrollPlan" class="form-label">Plan de Mensualidad <span class="required">*</span></label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-layer-group input-icon"></i>
+                      <select id="enrollPlan" name="enrollPlan" class="form-control" required>
+                        <option value="Plan Semillita & Infantil">Plan Semillita & Infantil ($20/mes - Inscripción $15)</option>
+                        <option value="Plan Juvenil Proyección" selected>Plan Juvenil Proyección ($25/mes - Inscripción $20)</option>
+                        <option value="Plan Elenco Principal & Adultos">Plan Elenco Principal & Adultos ($30/mes - Inscripción $25)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="paymentMethod" class="form-label">Método Previsto de Pago <span class="required">*</span></label>
+                    <div class="input-icon-wrap">
+                      <i class="fa-solid fa-wallet input-icon"></i>
+                      <select id="paymentMethod" name="paymentMethod" class="form-control" required>
+                        <option value="Pago Móvil">Pago Móvil (Banesco / Venezuela)</option>
+                        <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+                        <option value="Efectivo en Sede (Divisas / Bs.)">Efectivo en Sede (Divisas / Bs.)</option>
+                        <option value="Zelle">Zelle</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="terms-agreement-check">
+                  <input type="checkbox" id="termsCheck" required checked>
+                  <label for="termsCheck">
+                    Acepto cumplir el reglamento interno de la <strong>Academia Danzas Erick</strong> y asistir con puntualidad a los ensayos de lunes a viernes en el horario asignado.
+                  </label>
+                </div>
+
+              </div>
+
+              <!-- Form Submit Actions -->
+              <div class="form-actions-wrapper">
+                <button type="submit" class="btn btn-lg btn-gold btn-submit-enrollment" id="btnSubmitForm">
+                  <i class="fa-solid fa-paper-plane"></i> Generar Ficha de Inscripción
+                </button>
+                <button type="reset" class="btn btn-outline" id="btnResetForm">
+                  <i class="fa-solid fa-eraser"></i> Limpiar
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL: FICHA DE INSCRIPCIÓN / COMPROBANTE OFICIAL -->
+  <div class="modal-overlay" id="receiptModal" aria-hidden="true">
+    <div class="modal-container receipt-modal-box">
+      
+      <div class="modal-header">
+        <div class="receipt-header-brand">
+          <img src="assets/silueta_nacionalista.jpg" alt="Icono Danzas Erick" class="receipt-logo-thumb">
+          <div>
+            <h3>ACADEMIA DANZAS ERICK</h3>
+            <span>Ficha Oficial de Inscripción • Ciclo 2026</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="btnCloseReceiptModal" aria-label="Cerrar">&times;</button>
+      </div>
+
+      <div class="modal-body" id="receiptPrintableArea">
+        
+        <div class="receipt-stamp-badge">
+          <i class="fa-solid fa-certificate"></i> INSCRIPCIÓN REGISTRADA
+        </div>
+
+        <div class="receipt-details-grid">
+          
+          <div class="receipt-group">
+            <span class="rg-label">Código de Inscripción:</span>
+            <strong class="rg-val text-gold" id="receiptCode">DE-2026-0001</strong>
+          </div>
+
+          <div class="receipt-group">
+            <span class="rg-label">Fecha de Emisión:</span>
+            <span class="rg-val" id="receiptDate">16/10/2026</span>
+          </div>
+
+          <div class="receipt-group full-width">
+            <span class="rg-label">Bailarín(a):</span>
+            <strong class="rg-val rg-name" id="receiptStudentName">Nombre del Alumno</strong>
+          </div>
+
+          <div class="receipt-group">
+            <span class="rg-label">Cédula / Identificación:</span>
+            <span class="rg-val" id="receiptStudentCedula">V-00.000.000</span>
+          </div>
+
+          <div class="receipt-group">
+            <span class="rg-label">Edad / Género:</span>
+            <span class="rg-val" id="receiptStudentAge">15 años • Femenino</span>
+          </div>
+
+          <div class="receipt-group">
+            <span class="rg-label">Categoría Asignada:</span>
+            <strong class="rg-val text-gold" id="receiptCategory">Juvenil</strong>
+          </div>
+
+          <div class="receipt-group">
+            <span class="rg-label">Horario de Ensayos:</span>
+            <strong class="rg-val" id="receiptSchedule">Lunes a Viernes • 6:00 a 7:00 PM</strong>
+          </div>
+
+          <div class="receipt-group">
+            <span class="rg-label">Plan Seleccionado:</span>
+            <span class="rg-val" id="receiptPlan">Plan Juvenil Proyección</span>
+          </div>
+
+          <div class="receipt-group">
+            <span class="rg-label">Método de Pago:</span>
+            <span class="rg-val" id="receiptPayment">Pago Móvil</span>
+          </div>
+
+          <div class="receipt-group full-width" id="receiptGuardianWrap">
+            <span class="rg-label">Representante Legal:</span>
+            <span class="rg-val" id="receiptGuardian">No aplica (Mayor de edad)</span>
+          </div>
+
+        </div>
+
+        <div class="receipt-legal-note">
+          <p><i class="fa-solid fa-circle-info text-gold"></i> <strong>Instrucciones para formalizar:</strong> Presentar esta ficha en la sede de Danzas Erick de 4:00 PM a 8:00 PM junto con el comprobante de pago de la inscripción o enviarla por WhatsApp.</p>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="btnPrintReceipt">
+          <i class="fa-solid fa-print"></i> Imprimir Ficha
+        </button>
+        <button type="button" class="btn btn-whatsapp" id="btnSendWhatsAppReceipt">
+          <i class="fa-brands fa-whatsapp"></i> Enviar a Danzas Erick por WhatsApp
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL: PANEL DE ALUMNOS REGISTRADOS (LOCAL ADMIN) -->
+  <div class="modal-overlay" id="adminModal" aria-hidden="true">
+    <div class="modal-container admin-modal-box">
+      
+      <div class="modal-header">
+        <div class="modal-title-with-icon">
+          <i class="fa-solid fa-users-gear text-gold"></i>
+          <div>
+            <h3>Alumnos Inscritos en Danzas Erick</h3>
+            <span class="sub-text">Registro local de la academia por categoría de ensayo (4:00 a 8:00 PM)</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="btnCloseAdminModal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        
+        <div class="admin-toolbar">
+          <div class="admin-stats-pills">
+            <span class="stat-pill">Total Inscritos: <strong id="adminTotalCount">0</strong></span>
+            <span class="stat-pill pill-gold">Ciclo 2026</span>
+          </div>
+          <div class="admin-actions">
+            <button class="btn btn-xs btn-outline" id="btnExportCsv"><i class="fa-solid fa-file-csv"></i> Exportar Lista</button>
+            <button class="btn btn-xs btn-outline-danger" id="btnClearStorage"><i class="fa-solid fa-trash"></i> Limpiar</button>
+          </div>
+        </div>
+
+        <div class="admin-table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Alumno</th>
+                <th>Cédula</th>
+                <th>Categoría</th>
+                <th>Horario Ensayo</th>
+                <th>Contacto</th>
+                <th>Plan</th>
+              </tr>
+            </thead>
+            <tbody id="adminStudentsTbody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnCloseAdminFooter">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <img src="assets/silueta_nacionalista.jpg" alt="Icono Danzas Erick" class="footer-avatar">
+          <div>
+            <h4>DANZAS ERICK</h4>
+            <p>Academia de Danza Nacionalista</p>
+          </div>
+        </div>
+        <p class="footer-bio">
+          Preservando el folclore venezolano con rigor técnico, pasión escénica y orgullo patrio. Ensayos de lunes a viernes de 4:00 PM a 8:00 PM.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-link" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Horarios de Ensayo</h5>
+        <ul class="footer-links-list">
+          <li><strong>Lunes a Viernes</strong></li>
+          <li>4:00 PM - 5:00 PM: Semillitas</li>
+          <li>5:00 PM - 6:00 PM: Infantil</li>
+          <li>6:00 PM - 7:00 PM: Juvenil</li>
+          <li>7:00 PM - 8:00 PM: Adultos y Elenco</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Contacto y Sede</h5>
+        <ul class="footer-links-list">
+          <li><i class="fa-solid fa-location-dot text-gold"></i> Salón Principal de Artes y Danza</li>
+          <li><i class="fa-brands fa-whatsapp text-gold"></i> +58 412-5551234</li>
+          <li><i class="fa-solid fa-envelope text-gold"></i> direccion@danzas-erick.com</li>
+          <li><i class="fa-solid fa-clock text-gold"></i> Atención: Lun a Vie 3:30 - 8:30 PM</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Danzas Erick • Todos los derechos reservados. Danza Nacionalista y Tradicional Venezolana.</p>
+        <div class="tricolor-bar-strip">
+          <span class="tricolor-yellow"></span>
+          <span class="tricolor-blue"></span>
+          <span class="tricolor-red"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="app.js"></script>
 </body>
 </html>
